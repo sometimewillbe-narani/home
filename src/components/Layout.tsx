@@ -269,7 +269,7 @@ export default function Layout() {
                 <span className="hidden sm:inline text-brand-blue/10">|</span>
                 <p>상담문의 : <a href="tel:051-991-0186" className="hover:text-brand-pink transition-colors">051-991-0186</a> / <a href="tel:010-2159-0456" className="hover:text-brand-pink transition-colors">010-2159-0456</a></p>
                 <span className="hidden sm:inline text-brand-blue/10">|</span>
-                <p>이메일 : <a href="mailto:naranioffical@gmail.com" className="hover:text-brand-pink transition-colors">naranioffical@gmail.com</a></p>
+                <p>이메일 : <a href="mailto:naranhioffical@gmail.com" className="hover:text-brand-pink transition-colors">naranioffical@gmail.com</a></p>
               </div>
             </div>
           </div>
