@@ -3,7 +3,7 @@ export const Logo = ({ monochrome = false }: { monochrome?: boolean }) => (
     <img 
       src="/logo.png" 
       alt="나란히 로고" 
-      className={`h-full w-auto object-contain bg-transparent m-0 p-0 border-none block pointer-events-auto ${monochrome ? 'grayscale opacity-70' : ''}`}
+ className="h-full w-auto object-contain [mix-blend-mode:multiply]"
       style={{ 
         imageRendering: '-webkit-optimize-contrast',
         transform: 'translateZ(0) scale(1)',
