@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Logo = () => {
   return (
-    <div className="flex items-center h-28 md:h-36 lg:h-[130px] transition-all duration-300">
+    <div className="flex items-center h-22 md:h-28 lg:h-[110px] transition-all duration-300">
       <img
         src="/logo.png"
         alt="나란히"
