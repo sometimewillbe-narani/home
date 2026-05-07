@@ -122,7 +122,7 @@ export default function Home() {
                     </div>
                     <div className="text-left whitespace-nowrap">
                       <p className="text-[10px] text-brand-blue/60 font-bold mb-0.5 tracking-tight uppercase leading-none">안심 보장 시스템</p>
-                      <p className="text-[15px] sm:text-[17px] font-black text-brand-blue leading-none mt-1">전문인력 배상책임보험 가입</p>
+                      <p className="text-[15px] sm:text-[17px] font-black text-brand-blue leading-none mt-1">전문인 배상책임보험 가입</p>
                     </div>
                   </motion.div>
                 </div>
