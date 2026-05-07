@@ -41,7 +41,7 @@ export default function Guide() {
               href="https://pf.kakao.com/_rdGEX"
               target="_blank"
               rel="noreferrer"
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 15 }}s
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
