@@ -18,7 +18,7 @@ export default function Guide() {
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
             {/* 1. 네이버 예약 */}
             <motion.a 
-              href="https://new.smartplace.naver.com/bizes/place/11853307"
+              href="https://naver.me/GsBPdE7O"
               target="_blank"
               rel="noreferrer"
               initial={{ opacity: 0, y: 15 }}
@@ -31,8 +31,8 @@ export default function Guide() {
               </div>
               <div>
                 <div className="text-[#03C75A] font-bold text-sm mb-1">01</div>
-                <h3 className="text-[19px] md:text-[23px] font-bold text-brand-blue mb-1">네이버 예약</h3>
-                <p className="text-brand-blue/60 text-[14px]">일정 달력에서 원하는 시간을 바로 선택하세요</p>
+                <h3 className="text-[19px] md:text-[23px] font-bold text-brand-blue mb-1">서비스 신청하기</h3>
+                <p className="text-brand-blue/60 text-[14px]">신청서를 작성해 주시면 확인 후 연락드립니다</p>
               </div>
             </motion.a>
 
