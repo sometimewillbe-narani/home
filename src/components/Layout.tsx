@@ -135,7 +135,7 @@ export default function Layout() {
                       <FileEdit className="w-6 h-6 text-brand-pink" />
                     </div>
                     <div className="text-left">
-                      <div className="font-bold text-brand-blue text-[17px]">서비스 신청하기 (네이버 폼)</div>
+                      <div className="font-bold text-brand-blue text-[17px]">서비스 신청하기</div>
                       <div className="text-brand-blue/50 text-sm font-medium mt-0.5">상세한 정보를 남겨주시면 연락드릴게요</div>
                     </div>
                   </div>
