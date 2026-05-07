@@ -4,7 +4,6 @@ import { Star, Award, ShieldCheck } from 'lucide-react';
 export default function Home() {
   return (
     <section className="relative w-full min-h-[100vh] flex items-center overflow-hidden bg-white pt-24 lg:pt-32">
-      {/* Premium Mesh Gradient Background - Higher Intensity */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white via-white/20 to-brand-blue/15"></div>
         <div className="absolute top-[10%] left-[15%] w-[85%] h-[85%] bg-[radial-gradient(circle,rgba(9,23,142,0.18)_0%,transparent_60%)] animate-pulse"></div>
@@ -14,8 +13,6 @@ export default function Home() {
       </div>
       
       <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-24 grid grid-cols-1 md:grid-cols-2 gap-32 lg:gap-56 items-center z-10 py-12 md:py-24">
-        
-        {/* Left: Text Content */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
@@ -23,7 +20,6 @@ export default function Home() {
           className="flex flex-col items-start justify-center text-left"
         >
           <div className="space-y-4 md:space-y-6">
-            {/* Sub-header Label Layout */}
             <motion.div
               initial={{ opacity: 0, x: -15 }}
               animate={{ opacity: 1, x: 0 }}
@@ -71,10 +67,8 @@ export default function Home() {
                   부산, 경남 지역 전문 <span className="text-brand-blue font-black underline decoration-brand-pink/30 underline-offset-4">병원, 일상, 행정 동행 서비스</span>
                 </p>
 
-                {/* Info Cards - Staggered Layout (2 on top, 1 on bottom) */}
                 <div className="mt-10 flex flex-col space-y-4 items-start w-full">
                   <div className="flex flex-row items-center gap-3 sm:gap-4 flex-nowrap">
-                    {/* Item 1: Satisfaction */}
                     <motion.div 
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -91,7 +85,6 @@ export default function Home() {
                       </div>
                     </motion.div>
                     
-                    {/* Item 2: Certified Manager */}
                     <motion.div 
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -109,7 +102,6 @@ export default function Home() {
                     </motion.div>
                   </div>
 
-                  {/* Item 3: Insurance - Positioned below and shifted right (reduced for no overlap) */}
                   <motion.div 
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -130,7 +122,6 @@ export default function Home() {
           </div>
         </motion.div>
 
-        {/* Right: Modern Floating Layout */}
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           animate={{ 
@@ -146,10 +137,8 @@ export default function Home() {
           className="relative w-full max-w-sm sm:max-w-md mx-auto md:max-w-sm lg:max-w-md md:ml-auto md:mr-4 lg:mr-8 mt-10 md:mt-0"
           style={{ perspective: "2000px" }}
         >
-          {/* Background Glow - More atmospheric */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-brand-blue/30 via-brand-green/20 to-brand-pink/10 blur-[80px] -z-10 rounded-full opacity-60"></div>
 
-          {/* Main Image Card with 3D Tilt */}
           <motion.div 
             whileHover={{ rotateY: -12, rotateX: 6, scale: 1.02 }}
             transition={{ type: "spring", stiffness: 100, damping: 20 }}
@@ -163,16 +152,12 @@ export default function Home() {
             <img 
               src="/background.jpg" 
               alt="나란히 동행 서비스" 
-              referrerPolicy="no-referrer"
               className="w-full h-full object-cover transition-transform duration-700"
             />
-            {/* Glossy Overlay for glass effect */}
             <div className="absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-white/5 pointer-events-none"></div>
-            {/* Bottom Gradient for depth */}
             <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
           </motion.div>
         </motion.div>
-
       </div>
     </section>
   );
