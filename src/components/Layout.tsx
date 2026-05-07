@@ -32,7 +32,8 @@ export default function Layout() {
               onClick={() => setIsModalOpen(true)}
               className="bg-brand-pink/30 border border-brand-pink/20 text-brand-blue px-5 lg:px-8 py-2.5 lg:py-3.5 rounded-full font-extrabold text-[15px] lg:text-[18px] shadow-sm hover:bg-brand-pink/50 hover:shadow-brand-pink/20 hover:-translate-y-0.5 transition-all outline-none whitespace-nowrap"
             >
-              서비스 신청하기
+              {/* 메인 버튼 문구 원복 */}
+              상담/예약 신청
             </button>
             <button 
               onClick={() => setIsMobileMenuOpen(true)}
@@ -84,7 +85,7 @@ export default function Layout() {
                   }}
                   className="w-full bg-brand-pink text-white py-4 rounded-2xl font-bold text-lg shadow-lg shadow-brand-pink/20"
                 >
-                  서비스 신청하기
+                  상담/예약 신청
                 </button>
               </div>
             </motion.div>
@@ -96,7 +97,7 @@ export default function Layout() {
         <Outlet />
       </main>
 
-      {/* Reservation Modal - Global */}
+      {/* Reservation Modal */}
       <AnimatePresence>
         {isModalOpen && (
           <div className="fixed inset-0 z-[60] flex items-center justify-center px-4">
@@ -127,7 +128,7 @@ export default function Layout() {
               </div>
 
               <div className="flex flex-col gap-3">
-                {/* 1. 네이버 폼 신청 주소 반영 완료 */}
+                {/* 모달 내부 버튼만 '서비스 신청하기'로 유지 */}
                 <a href="https://naver.me/GsBPdE7O" target="_blank" rel="noreferrer" className="flex items-center justify-between bg-white border border-gray-100 p-4 rounded-2xl hover:border-brand-pink/40 hover:bg-brand-pink/5 transition-all group shadow-sm hover:shadow">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-xl bg-brand-pink/10 flex items-center justify-center">
@@ -141,7 +142,6 @@ export default function Layout() {
                   <ArrowRight className="w-5 h-5 text-brand-pink opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
                 </a>
                 
-                {/* 2. 카톡 상담 */}
                 <a href="https://pf.kakao.com/_rdGEX" target="_blank" rel="noreferrer" className="flex items-center justify-between bg-white border border-gray-100 p-4 rounded-2xl hover:border-[#FEE500]/70 hover:bg-[#FEE500]/10 transition-all group shadow-sm hover:shadow">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-xl bg-[#FEE500]/30 flex items-center justify-center">
@@ -155,12 +155,9 @@ export default function Layout() {
                   <ArrowRight className="w-5 h-5 text-[#391B1B] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
                 </a>
 
-                {/* 3. 전화 상담 */}
                 <div 
                   onClick={() => {
-                    if (!showPhone) {
-                      setShowPhone(true);
-                    }
+                    if (!showPhone) setShowPhone(true);
                   }}
                   className={`flex items-center justify-between bg-white border border-gray-100 p-4 rounded-2xl hover:border-brand-blue/40 hover:bg-brand-blue/5 transition-all group shadow-sm hover:shadow ${!showPhone ? 'cursor-pointer' : 'cursor-default'}`}
                 >
@@ -171,37 +168,14 @@ export default function Layout() {
                     <div className="text-left w-full overflow-hidden">
                       <AnimatePresence mode="wait">
                         {!showPhone ? (
-                          <motion.div
-                            key="title"
-                            initial={{ opacity: 0, x: -10 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: 10 }}
-                          >
+                          <motion.div key="title" initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 10 }}>
                             <div className="font-bold text-brand-blue text-[17px]">전화 상담/예약</div>
                             <div className="text-brand-blue/50 text-sm font-medium mt-0.5">클릭하여 전화번호 확인</div>
                           </motion.div>
                         ) : (
-                          <motion.div
-                            key="phone"
-                            initial={{ opacity: 0, x: -10 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: 10 }}
-                            className="flex flex-col gap-1.5"
-                          >
-                            <a 
-                              href="tel:051-991-0186" 
-                              onClick={(e) => e.stopPropagation()}
-                              className="font-bold text-brand-pink text-[18px] tracking-tight hover:scale-105 transition-transform"
-                            >
-                              051-991-0186
-                            </a>
-                            <a 
-                              href="tel:010-2159-0456" 
-                              onClick={(e) => e.stopPropagation()}
-                              className="font-bold text-brand-blue text-[18px] tracking-tight hover:scale-105 transition-transform"
-                            >
-                              010-2159-0456
-                            </a>
+                          <motion.div key="phone" initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 10 }} className="flex flex-col gap-1.5">
+                            <a href="tel:051-991-0186" onClick={(e) => e.stopPropagation()} className="font-bold text-brand-pink text-[18px] tracking-tight hover:scale-105 transition-transform">051-991-0186</a>
+                            <a href="tel:010-2159-0456" onClick={(e) => e.stopPropagation()} className="font-bold text-brand-blue text-[18px] tracking-tight hover:scale-105 transition-transform">010-2159-0456</a>
                           </motion.div>
                         )}
                       </AnimatePresence>
@@ -214,8 +188,6 @@ export default function Layout() {
           </div>
         )}
       </AnimatePresence>
-
-      {/* Footer 생략 (수정 없음) */}
     </div>
   );
 }
