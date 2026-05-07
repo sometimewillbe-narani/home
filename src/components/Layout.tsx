@@ -136,7 +136,7 @@ export default function Layout() {
                     </div>
                     <div className="text-left">
                       <div className="font-bold text-brand-blue text-[17px]">서비스 신청하기</div>
-                      <div className="text-brand-blue/50 text-sm font-medium mt-0.5">상세한 정보를 남겨주시면 연락드릴게요</div>
+                      <div className="text-brand-blue/50 text-sm font-medium mt-0.5">신청서를 작성해 주시면 연락드릴게요</div>
                     </div>
                   </div>
                   <ArrowRight className="w-5 h-5 text-brand-pink opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
