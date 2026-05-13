@@ -97,47 +97,39 @@ export default function Layout() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-50 border-t border-gray-100 py-12 md:py-16">
+      <footer className="bg-gray-50 border-t border-gray-100 py-10 md:py-14">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+          <div className="flex flex-col md:flex-row justify-between items-start gap-8">
+            {/* 왼쪽: 브랜드 로고 및 슬로건 */}
             <div>
               <Logo />
-              <p className="mt-6 text-gray-500 font-medium leading-relaxed">
+              <p className="mt-4 text-gray-500 font-medium leading-relaxed text-sm md:text-base">
                 가족의 마음으로 함께 걷는 동행 서비스, 나란히입니다.<br />
                 어르신의 안전한 외출과 보호자의 안심을 약속드립니다.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-sm">
-              <div className="flex flex-col gap-3">
-                <h4 className="font-bold text-brand-blue text-base">서비스 지역</h4>
-                <p className="text-gray-500 leading-6">
-                  부산, 울산, 양산,<br />
-                  마산, 창원, 포항 및 경남 전 지역
-                </p>
+            {/* 오른쪽: 모든 정보 통합 정렬 */}
+            <div className="flex flex-col items-start md:items-end text-[12px] md:text-[13px] text-gray-500 font-medium gap-2 md:text-right">
+              <div className="flex flex-wrap gap-x-3 gap-y-1 justify-start md:justify-end">
+                <span className="text-brand-blue font-bold">서비스 지역: 부산, 울산, 경남 전 지역</span>
+                <span className="hidden md:inline text-gray-300">|</span>
+                <span>대표전화: 051-991-0186</span>
+                <span className="hidden md:inline text-gray-300">|</span>
+                <span>직통: 010-2159-0456</span>
               </div>
-              <div className="flex flex-col gap-3">
-                <h4 className="font-bold text-brand-blue text-base">고객센터</h4>
-                <div className="text-gray-500 leading-6">
-                  <p>대표전화: 051-991-0186</p>
-                  <p>직통: 010-2159-0456</p>
-                </div>
+              
+              <div className="flex flex-wrap gap-x-3 gap-y-1 justify-start md:justify-end text-gray-400">
+                <span>대표자: 황희주</span>
+                <span>사업자등록번호: 594-44-00678</span>
+                <span className="hidden md:inline text-gray-300">|</span>
+                <span>© 2024 나란히(Naranhi). All rights reserved.</span>
               </div>
-            </div>
-          </div>
-          
-          {/* 하단 영역: 저작권, 대표자, 사업자번호, 미니로고를 모두 우측 정렬로 한 줄 배치 */}
-          <div className="mt-12 pt-8 border-t border-gray-200/50 flex justify-end items-center text-[10px] md:text-[11px] text-gray-400 font-medium gap-3">
-            <span>© 2024 나란히(Naranhi). All rights reserved.</span>
-            <span className="text-gray-200">|</span>
-            <div className="flex gap-3">
-              <span>대표자: 황희주</span>
-              <span>사업자등록번호: 594-44-00678</span>
-            </div>
-            <span className="text-gray-200">|</span>
-            <div className="flex items-center gap-1">
-              <img src="/logo.jpg" alt="나란히" className="h-3 opacity-60" />
-              <span className="font-medium text-gray-500">나란히동행</span>
+
+              <div className="mt-2 flex items-center gap-1.5 opacity-70">
+                <img src="/logo.jpg" alt="나란히" className="h-3.5" />
+                <span className="font-bold text-gray-500">나란히동행</span>
+              </div>
             </div>
           </div>
         </div>
