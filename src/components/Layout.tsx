@@ -100,22 +100,23 @@ export default function Layout() {
       <footer className="bg-gray-50 border-t border-gray-100 py-10 md:py-14">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-start gap-8">
-            {/* 왼쪽: 브랜드 로고 및 슬로건 */}
-            <div>
-              <Logo />
-              <p className="mt-4 text-gray-500 font-medium leading-relaxed text-sm md:text-base">
+            {/* 왼쪽: 슬로건 (로고는 삭제됨) */}
+            <div className="max-w-sm">
+              <p className="text-gray-500 font-medium leading-relaxed text-sm md:text-base">
                 가족의 마음으로 함께 걷는 동행 서비스, 나란히입니다.<br />
                 어르신의 안전한 외출과 보호자의 안심을 약속드립니다.
               </p>
             </div>
             
-            {/* 오른쪽: 모든 정보 통합 정렬 */}
-            <div className="flex flex-col items-start md:items-end text-[12px] md:text-[13px] text-gray-500 font-medium gap-2 md:text-right">
+            {/* 오른쪽: 모든 정보 통합 및 서비스 지역 전체 포함 */}
+            <div className="flex flex-col items-start md:items-end text-[12px] md:text-[13px] text-gray-500 font-medium gap-2 md:text-right w-full">
               <div className="flex flex-wrap gap-x-3 gap-y-1 justify-start md:justify-end">
-                <span className="text-brand-blue font-bold">서비스 지역: 부산, 울산, 경남 전 지역</span>
-                <span className="hidden md:inline text-gray-300">|</span>
+                <span className="text-brand-blue font-bold">서비스 지역: 부산, 울산, 양산, 마산, 창원, 포항 및 경남 전 지역</span>
+              </div>
+              
+              <div className="flex flex-wrap gap-x-3 gap-y-1 justify-start md:justify-end">
                 <span>대표전화: 051-991-0186</span>
-                <span className="hidden md:inline text-gray-300">|</span>
+                <span className="text-gray-300 hidden md:inline">|</span>
                 <span>직통: 010-2159-0456</span>
               </div>
               
