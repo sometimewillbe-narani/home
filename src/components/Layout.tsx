@@ -97,39 +97,44 @@ export default function Layout() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-50 border-t border-gray-100 py-10 md:py-14">
+      <footer className="bg-gray-50 border-t border-gray-100 py-10 md:py-14 mt-auto">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-start gap-8">
-            {/* 왼쪽: 슬로건 (로고는 삭제됨) */}
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
+            {/* 왼쪽: 슬로건 (두 줄 유지) */}
             <div className="max-w-sm">
-              <p className="text-gray-500 font-medium leading-relaxed text-sm md:text-base">
+              <p className="text-gray-500 font-medium leading-relaxed text-sm md:text-[15px]">
                 가족의 마음으로 함께 걷는 동행 서비스, 나란히입니다.<br />
                 어르신의 안전한 외출과 보호자의 안심을 약속드립니다.
               </p>
             </div>
             
-            {/* 오른쪽: 모든 정보 통합 및 서비스 지역 전체 포함 */}
-            <div className="flex flex-col items-start md:items-end text-[12px] md:text-[13px] text-gray-500 font-medium gap-2 md:text-right w-full">
-              <div className="flex flex-wrap gap-x-3 gap-y-1 justify-start md:justify-end">
+            {/* 오른쪽: 통합 정보 정렬 */}
+            <div className="flex flex-col items-start md:items-end text-[11px] md:text-[12px] text-gray-500 font-medium gap-1.5 md:text-right">
+              {/* 서비스 지역 (전체 포함) */}
+              <div className="flex flex-wrap gap-x-2 justify-start md:justify-end">
                 <span className="text-brand-blue font-bold">서비스 지역: 부산, 울산, 양산, 마산, 창원, 포항 및 경남 전 지역</span>
               </div>
               
-              <div className="flex flex-wrap gap-x-3 gap-y-1 justify-start md:justify-end">
-                <span>대표전화: 051-991-0186</span>
-                <span className="text-gray-300 hidden md:inline">|</span>
-                <span>직통: 010-2159-0456</span>
+              {/* 고객센터 및 사업자 정보 */}
+              <div className="flex flex-wrap gap-x-3 gap-y-1 justify-start md:justify-end text-gray-400">
+                <div className="flex gap-3">
+                  <span>대표전화: 051-991-0186</span>
+                  <span>직통: 010-2159-0456</span>
+                </div>
+                <span className="hidden md:inline text-gray-300">|</span>
+                <div className="flex gap-3">
+                  <span>대표자: 황희주</span>
+                  <span>사업자번호: 594-44-00678</span>
+                </div>
               </div>
               
-              <div className="flex flex-wrap gap-x-3 gap-y-1 justify-start md:justify-end text-gray-400">
-                <span>대표자: 황희주</span>
-                <span>사업자등록번호: 594-44-00678</span>
-                <span className="hidden md:inline text-gray-300">|</span>
+              {/* 저작권 및 미니로고 */}
+              <div className="flex items-center gap-3 text-gray-400">
                 <span>© 2024 나란히(Naranhi). All rights reserved.</span>
-              </div>
-
-              <div className="mt-2 flex items-center gap-1.5 opacity-70">
-                <img src="/logo.jpg" alt="나란히" className="h-3.5" />
-                <span className="font-bold text-gray-500">나란히동행</span>
+                <div className="flex items-center gap-1 opacity-70">
+                  <img src="/logo.jpg" alt="나란히" className="h-3" />
+                  <span className="font-bold text-gray-500">나란히동행</span>
+                </div>
               </div>
             </div>
           </div>
