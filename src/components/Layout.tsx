@@ -32,7 +32,6 @@ export default function Layout() {
               onClick={() => setIsModalOpen(true)}
               className="bg-brand-pink/30 border border-brand-pink/20 text-brand-blue px-5 lg:px-8 py-2.5 lg:py-3.5 rounded-full font-extrabold text-[15px] lg:text-[18px] shadow-sm hover:bg-brand-pink/50 hover:shadow-brand-pink/20 hover:-translate-y-0.5 transition-all outline-none whitespace-nowrap"
             >
-              {/* 메인 버튼 문구 원복 */}
               상담/예약 신청
             </button>
             <button 
@@ -97,6 +96,46 @@ export default function Layout() {
         <Outlet />
       </main>
 
+      {/* Footer 섹션 추가 */}
+      <footer className="bg-gray-50 border-t border-gray-100 py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+            <div>
+              <Logo />
+              <p className="mt-6 text-gray-500 font-medium leading-relaxed">
+                가족의 마음으로 함께 걷는 동행 서비스, 나란히입니다.<br />
+                어르신의 안전한 외출과 보호자의 안심을 약속드립니다.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-sm">
+              <div className="flex flex-col gap-3">
+                <h4 className="font-bold text-brand-blue text-base">서비스 지역</h4>
+                <p className="text-gray-500 leading-6">
+                  부산광역시, 울산광역시, 양산시,<br />
+                  마산, 창원, 포항 및 경남 전 지역
+                </p>
+              </div>
+              <div className="flex flex-col gap-3">
+                <h4 className="font-bold text-brand-blue text-base">고객센터</h4>
+                <p className="text-gray-500 leading-6">
+                  대표전화: 051-991-0186<br />
+                  직통: 010-2159-0456
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-12 pt-8 border-t border-gray-200/50 flex flex-col md:flex-row justify-between items-center gap-4 text-[13px] text-gray-400 font-medium">
+            <p>© 2024 나란히(Naranhi). All rights reserved.</p>
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+              <span>대표자: 황희주</span>
+              <span>사업자등록번호: 594-44-00678</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+
       {/* Reservation Modal */}
       <AnimatePresence>
         {isModalOpen && (
@@ -128,7 +167,6 @@ export default function Layout() {
               </div>
 
               <div className="flex flex-col gap-3">
-                {/* 모달 내부 버튼만 '서비스 신청하기'로 유지 */}
                 <a href="https://naver.me/GsBPdE7O" target="_blank" rel="noreferrer" className="flex items-center justify-between bg-white border border-gray-100 p-4 rounded-2xl hover:border-brand-pink/40 hover:bg-brand-pink/5 transition-all group shadow-sm hover:shadow">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-xl bg-brand-pink/10 flex items-center justify-center">
