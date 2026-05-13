@@ -122,17 +122,23 @@ export default function Layout() {
                   <p>대표전화: 051-991-0186</p>
                   <p>직통: 010-2159-0456</p>
                 </div>
-                {/* 대표자 및 사업자번호 정보 추가: 고객센터 하단에 나란히 배치 */}
-                <div className="mt-2 pt-4 border-t border-gray-200/60 flex flex-wrap gap-x-4 gap-y-1 text-[12px] text-gray-400 font-normal">
-                  <span>대표자: 황희주</span>
-                  <span>사업자등록번호: 594-44-00678</span>
-                </div>
               </div>
             </div>
           </div>
           
-          <div className="mt-12 pt-8 border-t border-gray-200/50 flex justify-between items-center text-[13px] text-gray-400 font-medium">
-            <p>© 2024 나란히(Naranhi). All rights reserved.</p>
+          {/* 하단 영역: 저작권, 대표자, 사업자번호, 미니로고를 모두 우측 정렬로 한 줄 배치 */}
+          <div className="mt-12 pt-8 border-t border-gray-200/50 flex justify-end items-center text-[10px] md:text-[11px] text-gray-400 font-medium gap-3">
+            <span>© 2024 나란히(Naranhi). All rights reserved.</span>
+            <span className="text-gray-200">|</span>
+            <div className="flex gap-3">
+              <span>대표자: 황희주</span>
+              <span>사업자등록번호: 594-44-00678</span>
+            </div>
+            <span className="text-gray-200">|</span>
+            <div className="flex items-center gap-1">
+              <img src="/logo.jpg" alt="나란히" className="h-3 opacity-60" />
+              <span className="font-medium text-gray-500">나란히동행</span>
+            </div>
           </div>
         </div>
       </footer>
