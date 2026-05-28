@@ -1,9 +1,6 @@
 import { motion } from 'motion/react';
 import { 
-  HeartPulse, 
-  ShoppingBag, 
-  Landmark, 
-  ArrowRight,
+  CheckCircle2,
   Activity,
   HeartHandshake,
   Syringe,
@@ -16,35 +13,7 @@ import {
 } from 'lucide-react';
 
 export default function Services() {
-  // 1. 상단 메인 서비스 라인업 데이터
-  const serviceList = [
-    {
-      icon: <HeartPulse className="w-8 h-8 text-brand-pink" />,
-      title: "병원 전문 동행 서비스",
-      description: "진료 접수부터 수납, 약국 동행, 그리고 교수님 진료 브리핑 기록까지 보호자의 빈자리를 완벽하게 채웁니다.",
-      tag: "인기",
-      bgColor: "bg-brand-pink/5 border-brand-pink/10",
-      tagColor: "bg-brand-pink/10 text-brand-pink"
-    },
-    {
-      icon: <ShoppingBag className="w-8 h-8 text-brand-green" />,
-      title: "일상 맞춤 동행 서비스",
-      description: "간단한 산책, 장보기, 문화생활, 안과 나들이 등 혼자 가기 망설여졌던 모든 일상에 안전한 보폭을 맞춥니다.",
-      tag: "맞춤",
-      bgColor: "bg-brand-green/5 border-brand-green/10",
-      tagColor: "bg-brand-green/10 text-brand-green"
-    },
-    {
-      icon: <Landmark className="w-8 h-8 text-brand-blue" />,
-      title: "원무 행정 동행 서비스",
-      description: "입·퇴원 절차를 비롯하여 주민센터 업무, 은행, 복지 서비스 신청 등 복잡한 서류 처리와 절차를 안전하게 해결합니다.",
-      tag: "안심",
-      bgColor: "bg-brand-blue/5 border-brand-blue/10",
-      tagColor: "bg-brand-blue/10 text-brand-blue"
-    }
-  ];
-
-  // 2. 하단 "이런 분께 추천해요" 격자형 데이터
+  // 하단 "이런 분께 추천해요" 격자형 데이터
   const recommendationItems = [
     {
       icon: <UserCheck className="w-6 h-6 text-brand-blue" />,
@@ -95,65 +64,171 @@ export default function Services() {
 
   return (
     <div className="w-full py-20 md:py-32 bg-gray-50/50">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
         
-        {/* ================= 섹션 1: 메인 서비스 라인업 ================= */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <motion.span 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-brand-blue font-extrabold text-[14px] md:text-[16px] tracking-wider uppercase bg-brand-blue/10 px-4 py-1.5 rounded-full"
-          >
-            Our Services
-          </motion.span>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mt-4 mb-3 tracking-tight break-keep">
-            나란히 맞춤형 동행 서비스
+        {/* ================= 섹션 1: 메인 서비스 라인업 (기존 상세 박스 유지 + 컬러 테두리 강화) ================= */}
+        <div className="text-center mb-20 text-brand-blue">
+          <h2 className="text-[24px] md:text-[32px] font-black tracking-tight mb-4 break-keep">
+            맞춤형으로 선택하세요
           </h2>
-          <p className="text-gray-500 font-medium text-sm md:text-base">
-            원하시는 일정과 목적에 맞춰 가장 안전한 발걸음을 연결합니다.
+          <p className="text-brand-blue/70 font-semibold text-[15px] md:text-[17px]">
+            상황에 맞는 나란히 동행 서비스 라인업
           </p>
         </div>
+        
+        {/* 상단 2열 그리드: 실속 & 프리미엄 */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-8">
+          {/* 실속 동행 */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-[40px] p-10 lg:p-14 shadow-lg shadow-gray-200/40 border-2 border-brand-green/30 flex flex-col h-full hover:border-brand-green/60 transition-colors"
+          >
+            <div className="mb-10">
+              <div className="inline-block px-3 py-1 bg-brand-green/10 text-brand-green text-[12px] md:text-[14px] font-bold rounded-full mb-4">안심리포트 제공</div>
+              <h3 className="text-[20px] md:text-[24px] font-black text-gray-900 mb-4">실속 동행</h3>
+              <p className="text-brand-blue/60 text-[15px] md:text-[17px] font-medium">"병원 안에서는 전문가와 나란히"</p>
+            </div>
+            
+            <ul className="space-y-6 mb-10 flex-grow font-medium text-brand-blue/80 text-[14px] md:text-[15px]">
+              <li className="flex items-start gap-4">
+                <CheckCircle2 className="text-brand-green w-6 h-6 flex-shrink-0 mt-0.5" /> 
+                <span><strong className="text-brand-blue font-bold">병원 현장 합류</strong></span>
+              </li>
+              <li className="flex items-start gap-4">
+                <CheckCircle2 className="text-brand-green w-6 h-6 flex-shrink-0 mt-0.5" /> 
+                <span>접수, 수납, 각종 검사실 이동 및 진료실 <strong className="text-brand-blue font-bold">전 과정 밀착 동행</strong></span>
+              </li>
+              <li className="flex items-start gap-4">
+                <CheckCircle2 className="text-brand-green w-6 h-6 flex-shrink-0 mt-0.5" /> 
+                <span>어려운 의사 소견 및 처방 내용 <strong className="text-brand-blue font-bold">상세 메모</strong></span>
+              </li>
+              <li className="flex items-start gap-4">
+                <CheckCircle2 className="text-brand-green w-6 h-6 flex-shrink-0 mt-0.5" /> 
+                <span>진료 후 <strong className="text-brand-blue font-bold">인근 약국 동행</strong> 및 약품 수령·복약 지도 확인</span>
+              </li>
+              <li className="flex items-start gap-4">
+                <CheckCircle2 className="text-brand-green w-6 h-6 flex-shrink-0 mt-0.5" /> 
+                <span className="text-brand-blue font-bold">진료 내용 요약 및 안심리포트 즉시 발송</span>
+              </li>
+            </ul>
+          </motion.div>
 
-        {/* 3열 카드 그리드 */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start mb-28">
-          {serviceList.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              whileHover={{ y: -6 }}
-              className={`p-6 md:p-8 rounded-[2.5rem] bg-white border ${service.bgColor} shadow-sm flex flex-col justify-between overflow-hidden group`}
-            >
-              <div>
-                <div className="flex items-center justify-between mb-6">
-                  <div className="p-4 rounded-2xl bg-white shadow-md border border-gray-100 group-hover:scale-110 transition-transform">
-                    {service.icon}
-                  </div>
-                  <span className={`px-3 py-1 rounded-full text-xs font-bold ${service.tagColor}`}>
-                    {service.tag}
-                  </span>
-                </div>
-                <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-3 tracking-tight">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 text-[14px] md:text-[15px] leading-relaxed break-keep">
-                  {service.description}
-                </p>
-              </div>
-              <div className="mt-8 pt-4 border-t border-gray-100 flex items-center justify-between text-gray-400 group-hover:text-brand-blue transition-colors">
-                <span className="text-xs font-bold tracking-wider uppercase">서비스 신청하기</span>
-                <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
-              </div>
-            </motion.div>
-          ))}
+          {/* 프리미엄 동행 */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="bg-white rounded-[40px] p-10 lg:p-14 shadow-xl shadow-brand-pink/5 border-2 border-brand-pink/30 flex flex-col h-full relative overflow-hidden hover:border-brand-pink/60 transition-colors"
+          >
+            <div className="absolute top-0 right-0 w-40 h-40 bg-brand-pink rounded-bl-full opacity-5"></div>
+            
+            <div className="mb-10 relative z-10">
+              <div className="inline-block px-3 py-1 bg-brand-pink/10 text-brand-pink text-[12px] md:text-[14px] font-bold rounded-full mb-4">안심리포트 제공</div>
+              <h3 className="text-[20px] md:text-[24px] font-black text-gray-900 mb-4">프리미엄 동행</h3>
+              <p className="text-brand-blue/60 text-[15px] md:text-[17px] font-medium">"자택 문 앞부터 귀가까지 나란히"</p>
+            </div>
+            
+            <ul className="space-y-6 mb-10 flex-grow font-medium text-brand-blue/80 text-[14px] md:text-[15px] relative z-10">
+              <li className="flex items-start gap-4">
+                <CheckCircle2 className="text-brand-pink w-6 h-6 flex-shrink-0 mt-0.5" /> 
+                <span><strong className="text-brand-blue font-bold">자택 문 앞 출발부터 귀가까지</strong> 원스톱 1:1 밀착 케어</span>
+              </li>
+              <li className="flex items-start gap-4">
+                <CheckCircle2 className="text-brand-pink w-6 h-6 flex-shrink-0 mt-0.5" /> 
+                <span className="font-bold border-b-2 border-brand-pink/30 pb-0.5 text-brand-blue">고객 차량 대리운전 옵션 제공</span>
+              </li>
+              <li className="flex items-start gap-4">
+                <CheckCircle2 className="text-brand-pink w-6 h-6 flex-shrink-0 mt-0.5" /> 
+                <span>병원 입출입, 접수, 진료, 입/퇴원 수속 등 <strong className="text-brand-blue font-bold">모든 행정 업무 대행</strong></span>
+              </li>
+              <li className="flex items-start gap-4">
+                <CheckCircle2 className="text-brand-pink w-6 h-6 flex-shrink-0 mt-0.5" /> 
+                <span><strong className="text-brand-blue font-bold">약국 전면 동행</strong> 및 처방약 수령 후 안전한 자택 귀가 지원</span>
+              </li>
+              <li className="flex items-start gap-4">
+                <CheckCircle2 className="text-brand-pink w-6 h-6 flex-shrink-0 mt-0.5" /> 
+                <span className="text-brand-blue font-bold">모든 과정 실시간 안심리포트 및 가족 공유</span>
+              </li>
+            </ul>
+          </motion.div>
+        </div>
+
+        {/* 하단 2열 그리드: 일상 & 행정 */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {/* 일상 동행 */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-[40px] p-10 lg:p-14 shadow-lg shadow-gray-200/40 border-2 border-brand-pink/30 flex flex-col h-full hover:border-brand-pink/60 transition-colors"
+          >
+            <div className="mb-10">
+              <div className="inline-block px-3 py-1 bg-brand-pink/10 text-brand-pink text-[12px] md:text-[14px] font-bold rounded-full mb-4">안심리포트 제공</div>
+              <h3 className="text-[20px] md:text-[24px] font-black text-gray-900 mb-4">일상 동행</h3>
+              <p className="text-brand-blue/60 text-[15px] md:text-[17px] font-medium">"소소한 일상도 안전하고 즐겁게"</p>
+            </div>
+            
+            <ul className="space-y-6 mb-10 flex-grow font-medium text-brand-blue/80 text-[14px] md:text-[15px]">
+              <li className="flex items-start gap-4">
+                <CheckCircle2 className="text-brand-pink w-6 h-6 flex-shrink-0 mt-0.5" /> 
+                <span>산책, 장보기, 은행 등 <strong className="text-brand-blue font-bold">일상생활 나들이 동행</strong></span>
+              </li>
+              <li className="flex items-start gap-4">
+                <CheckCircle2 className="text-brand-pink w-6 h-6 flex-shrink-0 mt-0.5" /> 
+                <span>문화생활, 미용실 방문 등 여가 활동 지원</span>
+              </li>
+              <li className="flex items-start gap-4">
+                <CheckCircle2 className="text-brand-pink w-6 h-6 flex-shrink-0 mt-0.5" /> 
+                <span>낙상 방지 등 안전한 이동 및 자택 귀가 밀착 케어</span>
+              </li>
+              <li className="flex items-start gap-4">
+                <CheckCircle2 className="text-brand-pink w-6 h-6 flex-shrink-0 mt-0.5" /> 
+                <span className="text-brand-blue font-bold">일상 활동 및 정서 상태 안심리포트 제공</span>
+              </li>
+            </ul>
+          </motion.div>
+
+          {/* 행정 동행 */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="bg-white rounded-[40px] p-10 lg:p-14 shadow-lg shadow-gray-200/40 border-2 border-brand-green/30 flex flex-col h-full hover:border-brand-green/60 transition-colors"
+          >
+            <div className="mb-10">
+              <div className="inline-block px-3 py-1 bg-brand-green/10 text-brand-green text-[12px] md:text-[14px] font-bold rounded-full mb-4">안심리포트 제공</div>
+              <h3 className="text-[20px] md:text-[24px] font-black text-gray-900 mb-4">행정 동행</h3>
+              <p className="text-brand-blue/60 text-[15px] md:text-[17px] font-medium">"복잡한 관공서 업무도 든든하게"</p>
+            </div>
+            
+            <ul className="space-y-6 mb-10 flex-grow font-medium text-brand-blue/80 text-[14px] md:text-[15px]">
+              <li className="flex items-start gap-4">
+                <CheckCircle2 className="text-brand-green w-6 h-6 flex-shrink-0 mt-0.5" /> 
+                <span>행정복지센터, 구청, 세무서 등 <strong className="text-brand-blue font-bold">관공서 방문 동행</strong></span>
+              </li>
+              <li className="flex items-start gap-4">
+                <CheckCircle2 className="text-brand-green w-6 h-6 flex-shrink-0 mt-0.5" /> 
+                <span>각종 증명서 발급 및 복잡한 서류 작성 보조</span>
+              </li>
+              <li className="flex items-start gap-4">
+                <CheckCircle2 className="text-brand-green w-6 h-6 flex-shrink-0 mt-0.5" /> 
+                <span>우체국 등 <strong className="text-brand-blue font-bold">기타 행정/우편 업무</strong> 원스톱 지원</span>
+              </li>
+              <li className="flex items-start gap-4">
+                <CheckCircle2 className="text-brand-green w-6 h-6 flex-shrink-0 mt-0.5" /> 
+                <span className="text-brand-blue font-bold">업무 처리 결과 및 증빙 서류 안심리포트 포함</span>
+              </li>
+            </ul>
+          </motion.div>
         </div>
 
 
-        {/* ================= 섹션 2: 이런 분께 추천해요 ================= */}
-        <hr className="border-gray-200/60 my-16" />
+        {/* ================= 섹션 2: 이런 분께 추천해요 (타사 벤치마킹 연계 구조) ================= */}
+        <hr className="border-gray-200/60 my-24 max-w-5xl mx-auto" />
 
         <div className="text-center max-w-2xl mx-auto mb-16">
           <motion.span 
@@ -164,16 +239,16 @@ export default function Services() {
           >
             Naranhi Care
           </motion.span>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-brand-blue mt-4 mb-3 tracking-tight break-keep">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-brand-blue mt-4 mb-3 tracking-tight break-keep">
             이런 상황에, 나란히가 필요합니다
           </h2>
-          <p className="text-gray-500 font-medium text-sm md:text-base">
-            타사의 보편적인 기준을 넘어, 일상 속 세밀한 안전 공백까지 가족의 마음으로 채웁니다.
+          <p className="text-gray-500 font-medium text-sm md:text-base break-keep">
+            보편적인 기준을 넘어, 일상 속 세밀한 안전 공백까지 가족의 마음으로 채웁니다.
           </p>
         </div>
 
         {/* 픽토그램 스타일 3열 그리드 레이아웃 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {recommendationItems.map((item, index) => (
             <motion.div
               key={index}
@@ -182,7 +257,7 @@ export default function Services() {
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: (index % 3) * 0.05 }}
               whileHover={{ y: -4 }}
-              className="bg-white border border-gray-100/80 p-6 md:p-8 rounded-[2rem] shadow-sm hover:shadow-md transition-all flex flex-col gap-4 text-left"
+              className="bg-white border border-gray-100 p-6 md:p-8 rounded-[2rem] shadow-sm hover:shadow-md transition-all flex flex-col gap-4 text-left"
             >
               {/* 아이콘 서클 */}
               <div className="w-12 h-12 rounded-2xl bg-gray-50/80 flex items-center justify-center border border-gray-100 flex-shrink-0">
