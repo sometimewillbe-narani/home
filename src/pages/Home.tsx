@@ -13,24 +13,24 @@ export default function Home() {
         <Hero />
       </section>
       
-      {/* 1. 나란히 소개 (Philosophy 대신 Brand) */}
+      {/* 1. 나란히 소개 (Brand) */}
       <section id="brand" className="scroll-mt-24">
         <Brand />
       </section>
       
-      {/* 2. 핵심 특징 (추가된 특징 섹션) */}
-      <section id="features" className="scroll-mt-24">
-        <Features />
-      </section>
-      
-      {/* 3. 서비스 안내 (라인업) */}
+      {/* 2. 서비스 안내 (Services) */}
       <section id="services" className="scroll-mt-24">
         <Services />
       </section>
       
-      {/* 4. 예약 가이드 */}
+      {/* 3. 예약 가이드 (Guide) */}
       <section id="guide" className="scroll-mt-24">
         <Guide />
+      </section>
+      
+      {/* 4. 안심리포트 및 핵심 특징 (Features) */}
+      <section id="features" className="scroll-mt-24">
+        <Features />
       </section>
     </main>
   );
