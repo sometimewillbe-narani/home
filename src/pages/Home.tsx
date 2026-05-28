@@ -1,36 +1,36 @@
-// pages/Home.tsx
-import Hero from './components/Hero';
-import Philosophy from './components/Philosophy'; // 1. 나란히 소개
-import Targets from './components/Targets';         // 2. 서비스 안내 (대상)
-import Services from './components/Services';       // 2. 서비스 안내 (라인업)
-import Guide from './components/Guide';             // 3. 예약 가이드
-import Report from './components/Report';           // 4. 안심 리포트
+// src/pages/Home.tsx
+import Hero from './Hero'; 
+import Brand from './Brand'; 
+import Features from './Features'; 
+import Services from './Services'; 
+import Guide from './Guide'; 
 
 export default function Home() {
   return (
-    <main className="w-full overflow-hidden">
-      {/* 히어로 화면 */}
-      <Hero />
-      
-      {/* 1. 나란히 소개 */}
-      <section id="philosophy" className="scroll-mt-20">
-        <Philosophy />
+    <main className="w-full overflow-hidden bg-white">
+      {/* 히어로 메인 화면 */}
+      <section id="hero">
+        <Hero />
       </section>
       
-      {/* 2. 서비스 안내 */}
-      <section id="services" className="scroll-mt-20">
-        <Targets />
+      {/* 1. 나란히 소개 (Philosophy 대신 Brand) */}
+      <section id="brand" className="scroll-mt-24">
+        <Brand />
+      </section>
+      
+      {/* 2. 핵심 특징 (추가된 특징 섹션) */}
+      <section id="features" className="scroll-mt-24">
+        <Features />
+      </section>
+      
+      {/* 3. 서비스 안내 (라인업) */}
+      <section id="services" className="scroll-mt-24">
         <Services />
       </section>
       
-      {/* 3. 예약 가이드 */}
-      <section id="guide" className="scroll-mt-20">
+      {/* 4. 예약 가이드 */}
+      <section id="guide" className="scroll-mt-24">
         <Guide />
-      </section>
-      
-      {/* 4. 안심 리포트 */}
-      <section id="report" className="scroll-mt-20">
-        <Report />
       </section>
     </main>
   );
