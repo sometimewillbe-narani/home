@@ -99,11 +99,14 @@ export default function Layout() {
      {/* Footer */}
       <footer className="bg-gray-50 border-t border-gray-100 py-10 md:py-14 mt-auto">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
-            {/* 왼쪽: 슬로건 */}
-            <div className="max-w-sm">
-              <p className="text-gray-500 font-medium leading-relaxed text-sm md:text-[15px]">
-                가족의 마음으로 함께 걷는 동행 서비스, 나란히입니다.<br />
+          {/* items-end 대신 items-start를 주어 양쪽 윗선 정렬을 맞춥니다 */}
+          <div className="flex flex-col md:flex-row justify-between items-start gap-8">
+            {/* 왼쪽: 슬로건 (더 크고 굵게, 브랜드 블루 컬러 적용) */}
+            <div className="max-w-xl md:pt-1"> {/* 우측 첫 줄과 높이를 맞추기 위해 md:pt-1 추가 */}
+              <p className="text-brand-blue font-black text-[16px] md:text-[18px] tracking-tight mb-2">
+                가족의 마음으로 함께 걷는 동행 서비스, 나란히입니다.
+              </p>
+              <p className="text-gray-600 font-bold text-[14px] md:text-[15px] leading-relaxed break-keep">
                 어르신의 안전한 외출과 보호자의 안심을 약속드립니다.
               </p>
             </div>
