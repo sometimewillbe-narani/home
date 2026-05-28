@@ -106,7 +106,7 @@ export default function Layout() {
               <p className="text-brand-blue font-black text-[16px] md:text-[18px] tracking-tight mb-2">
                 가족의 마음으로 함께 걷는 동행 서비스, 나란히입니다.
               </p>
-              <p className="text-gray-600 font-bold text-[14px] md:text-[15px] leading-relaxed break-keep">
+              <p className="text-brand-pink font-bold text-[14px] md:text-[15px] leading-relaxed break-keep">
                 어르신의 안전한 외출과 보호자의 안심을 약속드립니다.
               </p>
             </div>
