@@ -103,11 +103,11 @@ export default function Layout() {
           <div className="flex flex-col md:flex-row justify-between items-start gap-8">
             {/* 왼쪽: 슬로건 (두 줄 폰트 사이즈 완벽 통일 버전) */}
             <div className="max-w-xl md:pt-1">
-              <p className="text-brand-blue font-black text-[16px] md:text-[18px] tracking-tight mb-2.5">
+              <p className="text-brand-pink font-black text-[16px] md:text-[18px] tracking-tight mb-2.5">
                 가족의 마음으로 함께 걷는 동행 서비스, 나란히입니다.
               </p>
-              {/* 첫 줄과 똑같이 text-[16px] md:text-[18px]로 크기를 맞추고 블루 컬러를 적용했습니다 */}
-              <p className="text-brand-blue font-black text-[16px] md:text-[18px] tracking-tight break-keep">
+              {/* 첫 줄과 똑같이 text-[16px] md:text-[18px]로 크기를 맞추고 핑크 컬러를 적용했습니다 */}
+              <p className="text-brand-pink font-black text-[16px] md:text-[18px] tracking-tight break-keep">
                 어르신의 안전한 외출과 보호자의 안심을 약속드립니다.
               </p>
             </div>
