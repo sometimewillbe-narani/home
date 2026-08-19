@@ -217,8 +217,8 @@ export default function Layout() {
                           </motion.div>
                         ) : (
                           <motion.div key="phone" initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 10 }} className="flex flex-col gap-1.5">
-                            <a href="tel:051-991-0186" onClick={(e) => e.stopPropagation()} className="font-bold text-brand-pink text-[18px] tracking-tight hover:scale-105 transition-transform">051-991-0186</a>
-                            <a href="tel:010-2159-0456" onClick={(e) => e.stopPropagation()} className="font-bold text-brand-blue text-[18px] tracking-tight hover:scale-105 transition-transform">010-2159-0456</a>
+                            <a href="tel:051-991-0186" onClick={(e) => e.stopPropagation()} className="font-bold text-brand-pink text-[18px] tracking-tight hover:scale-105 transition-transform">010-2159-0456</a>
+                            <a href="tel:010-2159-0456" onClick={(e) => e.stopPropagation()} className="font-bold text-brand-blue text-[18px] tracking-tight hover:scale-105 transition-transform">051-991-0186</a>
                           </motion.div>
                         )}
                       </AnimatePresence>
