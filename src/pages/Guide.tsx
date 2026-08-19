@@ -95,8 +95,8 @@ export default function Guide() {
                       exit={{ opacity: 0, y: -10 }}
                       className="flex flex-col items-center space-y-2"
                     >
-                      <a href="tel:051-991-0186" className="text-2xl font-black text-brand-pink tracking-tight hover:scale-105 transition-transform">051-991-0186</a>
-                      <a href="tel:010-2159-0456" className="text-2xl font-black text-brand-blue tracking-tight hover:scale-105 transition-transform">010-2159-0456</a>
+                      <a href="tel:010-2159-0456" className="text-2xl font-black text-brand-pink tracking-tight hover:scale-105 transition-transform">010-2159-0456</a>
+                      <a href="tel:051-991-0186" className="text-2xl font-black text-brand-blue tracking-tight hover:scale-105 transition-transform">051-991-0186</a>
                       <div className="px-3 py-1 bg-gray-50 text-gray-400 rounded-full text-[10px] font-bold mt-2">
                         번호를 클릭하면 바로 연결됩니다
                       </div>

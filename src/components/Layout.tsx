@@ -128,8 +128,8 @@ export default function Layout() {
 
               {/* 3. 연락처 정보 */}
               <div className="flex flex-wrap gap-x-3 gap-y-1 justify-start md:justify-end text-gray-400">
-                <span>대표전화: 051-991-0186</span>
                 <span>직통: 010-2159-0456</span>
+                <span>대표전화: 051-991-0186</span>
               </div>
 
               {/* 4. 저작권 (카피라이트) */}
