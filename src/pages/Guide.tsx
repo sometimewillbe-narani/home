@@ -18,7 +18,7 @@ export default function Guide() {
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
             {/* 1. 네이버 예약 */}
             <motion.a 
-              href="https://naver.me/GsBPdE7O"
+              href="https://apply.naranhi.co.kr"
               target="_blank"
               rel="noreferrer"
               initial={{ opacity: 0, y: 15 }}

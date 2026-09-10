@@ -172,7 +172,7 @@ export default function Layout() {
               </div>
 
               <div className="flex flex-col gap-3">
-                <a href="https://naver.me/GsBPdE7O" target="_blank" rel="noreferrer" className="flex items-center justify-between bg-white border border-gray-100 p-4 rounded-2xl hover:border-brand-pink/40 hover:bg-brand-pink/5 transition-all group shadow-sm hover:shadow">
+                <a href="https://apply.naranhi.co.kr" target="_blank" rel="noreferrer" className="flex items-center justify-between bg-white border border-gray-100 p-4 rounded-2xl hover:border-brand-pink/40 hover:bg-brand-pink/5 transition-all group shadow-sm hover:shadow">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-xl bg-brand-pink/10 flex items-center justify-center">
                       <FileEdit className="w-6 h-6 text-brand-pink" />
