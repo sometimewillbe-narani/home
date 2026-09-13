@@ -134,7 +134,7 @@ export default function Layout() {
 
               {/* 4. 저작권 (카피라이트) */}
               <div className="flex items-center gap-3 text-gray-400 mt-2">
-                <span>© 2026 마법같은 날(나란히 동행). All rights reserved.</span>
+                <span>© 2021-2026 마법같은 날(나란히 동행). All rights reserved.</span>
               </div>
             </div>
           </div>
